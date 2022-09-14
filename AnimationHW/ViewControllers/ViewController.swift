@@ -7,7 +7,7 @@
 
 import UIKit
 import SpringAnimation
-import XCTest
+//import XCTest
 
 class ViewController: UIViewController {
 
