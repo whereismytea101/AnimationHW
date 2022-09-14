@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     
     // MARK: - IBOutlets
+    
     @IBOutlet var springView: SpringView!
     @IBOutlet var presetLabel: UILabel!
     @IBOutlet var curveLabel: UILabel!
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func runAnimation(_ sender: SpringButton) {
+        springView.animation = animationData.animationArray.randomElement() ?? ""
+        springView.animate()
     }
     
     
