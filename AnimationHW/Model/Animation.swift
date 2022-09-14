@@ -36,20 +36,18 @@ extension AnimationsDecrption {
             delays.count
         
         )
-
         
-
-//        for animation in 0..<animationData.animationArray.count {
-//            animations.append(
-//            AnimationsDecrption (
-//                presetName: animationData.animationArray[animation],
-//                curveName: animationData.animationCurves[animation],
-//                force: animationData.forces.animation,
-//                duration: animationData.durations.animation,
-//                delay: animationData.delays.animation
-//            )
-//            )
+        for index in 0..<itarationCount {
+            let animation = AnimationsDecrption(
+                presetName: presetNames[index],
+                curveName: curveNames[index],
+                force: forces[index],
+                duration: durations[index],
+                delay: delays[index]
+            )
+            animations.append(animation)
         }
         return animations
     }
+    
 }
