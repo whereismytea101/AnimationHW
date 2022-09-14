@@ -27,9 +27,29 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="animationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pG-NY-wKu"/>
+                                    <action selector="runAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2K2-BK-fWQ"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-5G-3oL" customClass="SpringView" customModule="SpringAnimation">
@@ -139,12 +159,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="animatedView" destination="HTe-5G-3oL" id="RpD-WE-Fb1"/>
                         <outlet property="curveLabel" destination="FOv-lT-65w" id="OVK-bz-gOh"/>
                         <outlet property="delayLabel" destination="i1G-Wl-zWE" id="ClP-DH-SWo"/>
                         <outlet property="durationLabel" destination="exo-fM-kOR" id="LJg-jp-Bcu"/>
                         <outlet property="forceLabel" destination="tG7-t8-d4m" id="MkP-Zd-Onj"/>
                         <outlet property="presetLabel" destination="x8P-GX-heV" id="d6j-QQ-NbV"/>
+                        <outlet property="springView" destination="HTe-5G-3oL" id="g1B-fe-W0b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

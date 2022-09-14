@@ -13,8 +13,7 @@ class ViewController: UIViewController {
 
     
     // MARK: - IBOutlets
-    @IBOutlet var animatedView: UIView!
-    
+    @IBOutlet var springView: SpringView!
     @IBOutlet var presetLabel: UILabel!
     @IBOutlet var curveLabel: UILabel!
     @IBOutlet var forceLabel: UILabel!
@@ -27,12 +26,10 @@ class ViewController: UIViewController {
     
     // MARK: - IBActions
     
-    @IBAction func animationButtonPressed(_ sender: UIButton) {
-        
-        
+    
+    @IBAction func runAnimation(_ sender: SpringButton) {
     }
     
-
     
 }
 
