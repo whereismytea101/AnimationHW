@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjq-3g-ku0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjq-3g-ku0" customClass="SpringButton" customModule="SpringAnimation">
                                 <rect key="frame" x="77" y="632" width="260" height="31"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
@@ -28,8 +28,11 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="animationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pG-NY-wKu"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-5G-3oL">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTe-5G-3oL" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="77" y="167" width="260" height="212.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="5J0-i2-s8g" userLabel="FixedLabelsStackView">
@@ -73,8 +76,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="o3D-5X-hTT" userLabel="DynamicStackView">
                                         <rect key="frame" x="83" y="5" width="172" height="202.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8P-GX-heV" userLabel="preset">
-                                                <rect key="frame" x="65.5" y="0.0" width="41.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="preset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8P-GX-heV" userLabel="preset">
+                                                <rect key="frame" x="61.5" y="0.0" width="49" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -135,6 +138,14 @@
                             <constraint firstItem="yjq-3g-ku0" firstAttribute="width" secondItem="HTe-5G-3oL" secondAttribute="width" id="wcd-I9-K2P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animatedView" destination="HTe-5G-3oL" id="RpD-WE-Fb1"/>
+                        <outlet property="curveLabel" destination="FOv-lT-65w" id="OVK-bz-gOh"/>
+                        <outlet property="delayLabel" destination="i1G-Wl-zWE" id="ClP-DH-SWo"/>
+                        <outlet property="durationLabel" destination="exo-fM-kOR" id="LJg-jp-Bcu"/>
+                        <outlet property="forceLabel" destination="tG7-t8-d4m" id="MkP-Zd-Onj"/>
+                        <outlet property="presetLabel" destination="x8P-GX-heV" id="d6j-QQ-NbV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

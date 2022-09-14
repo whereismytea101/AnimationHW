@@ -6,14 +6,33 @@
 //
 
 import UIKit
+import SpringAnimation
+import XCTest
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    // MARK: - IBOutlets
+    @IBOutlet var animatedView: UIView!
+    
+    @IBOutlet var presetLabel: UILabel!
+    @IBOutlet var curveLabel: UILabel!
+    @IBOutlet var forceLabel: UILabel!
+    @IBOutlet var durationLabel: UILabel!
+    @IBOutlet var delayLabel: UILabel!
+    
+    
+    
+    
+    
+    // MARK: - IBActions
+    
+    @IBAction func animationButtonPressed(_ sender: UIButton) {
+        
+        
     }
+    
 
-
+    
 }
 
