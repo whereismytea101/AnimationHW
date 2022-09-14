@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     @IBAction func runAnimation(_ sender: SpringButton) {
         springView.animation = animationData.animationArray.randomElement() ?? ""
         springView.animate()
+        
+//        runAnimation.setTitle(<#T##String?#>, for: <#T##UIControl.State#>)
     }
     
     
