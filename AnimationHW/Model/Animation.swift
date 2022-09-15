@@ -28,7 +28,7 @@ extension Animation {
             presetName: animationPresets[0].rawValue,
             curveName: animationCurves[0].rawValue,
             force: Double.random(in: 0.5..<2.5),
-            duration: Double.random(in: 0.5..<2),
+            duration: Double.random(in: 0.5..<3),
             delay: Double.random(in: 0.5..<3)
         )
         return randomAnimation

@@ -24,10 +24,9 @@ class ViewController: UIViewController {
     
     // MARK: - IBActions
     
-    
     @IBAction func runAnimation(_ sender: SpringButton) {
         springView.animation = animationData.animationArray.randomElement() ?? ""
-       springView.animate()
+        springView.animate()
 //        sender.titleLabel?.text = "bla bla"
 //        springView.animation = Animation.getAnimation().presetName.randomElement() ?? ""
         
