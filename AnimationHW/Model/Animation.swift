@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import SpringAnimation
 
 let animationData = AnimationStore()
 
-struct AnimationsDecrption {
+struct Animation {
     let presetName: String
     let curveName: String
     let force: Double
@@ -17,37 +18,20 @@ struct AnimationsDecrption {
     let delay: Double
 }
 
-extension AnimationsDecrption {
-    static func getAnimation() -> [AnimationsDecrption] {
-        let animationStore = AnimationStore.shared
-        var animations: [AnimationsDecrption] = []
+extension Animation {
+    static func getAnimation() -> Animation {
+        let randomAnimation: Animation
+        let animationPresets = AnimationPreset.allCases.shuffled()
+        let animationCurves = AnimationCurve.allCases.shuffled()
         
-        let presetNames = animationStore.animationArray.shuffled()
-        let curveNames = animationStore.animationCurves.shuffled()
-        let forces = animationStore.forces.shuffled()
-        let durations = animationStore.durations.shuffled()
-        let delays = animationStore.delays.shuffled()
-        
-        let itarationCount = min(
-            presetNames.count,
-            curveNames.count,
-            forces.count,
-            durations.count,
-            delays.count
-        
+        randomAnimation = Animation(
+            presetName: animationPresets[0].rawValue,
+            curveName: animationCurves[0].rawValue,
+            force: Double.random(in: 0.5..<2.5),
+            duration: Double.random(in: 0.5..<2),
+            delay: Double.random(in: 0.5..<3)
         )
-        
-        for index in 0..<itarationCount {
-            let animation = AnimationsDecrption(
-                presetName: presetNames[index],
-                curveName: curveNames[index],
-                force: forces[index],
-                duration: durations[index],
-                delay: delays[index]
-            )
-            animations.append(animation)
-        }
-        return animations
+        return randomAnimation
     }
     
 }

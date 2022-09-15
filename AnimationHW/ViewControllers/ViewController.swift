@@ -10,7 +10,6 @@ import SpringAnimation
 //import XCTest
 
 class ViewController: UIViewController {
-
     
     // MARK: - IBOutlets
     
@@ -23,16 +22,16 @@ class ViewController: UIViewController {
     
     
     
-    
-    
     // MARK: - IBActions
     
     
     @IBAction func runAnimation(_ sender: SpringButton) {
         springView.animation = animationData.animationArray.randomElement() ?? ""
-        springView.animate()
+       springView.animate()
+//        sender.titleLabel?.text = "bla bla"
+//        springView.animation = Animation.getAnimation().presetName.randomElement() ?? ""
         
-//        runAnimation.setTitle(<#T##String?#>, for: <#T##UIControl.State#>)
+//        runAnimation.setTitle("rwfae", for: .normal)
     }
     
     
