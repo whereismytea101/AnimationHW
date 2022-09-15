@@ -30,11 +30,8 @@ class ViewController: UIViewController {
         
         sender.setTitle("\(springView.animation)", for: .normal)
         
+        sender.titleLabel?.text = presetLabel.text
         
-//        sender.titleLabel?.text = "bla bla"
-//        springView.animation = Animation.getAnimation().presetName.randomElement() ?? ""
-        
-//        runAnimation.setTitle("rwfae", for: .normal)
     }
     
     
