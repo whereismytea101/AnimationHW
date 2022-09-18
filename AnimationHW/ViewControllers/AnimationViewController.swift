@@ -9,7 +9,7 @@ import UIKit
 import SpringAnimation
 //import XCTest
 
-class ViewController: UIViewController {
+class AnimationViewController: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -29,8 +29,9 @@ class ViewController: UIViewController {
         springView.animate()
         
         sender.setTitle("\(springView.animation)", for: .normal)
-        
         sender.titleLabel?.text = presetLabel.text
+        
+        
         
     }
     

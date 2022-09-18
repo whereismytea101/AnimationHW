@@ -5,33 +5,32 @@
 //  Created by Самир Кафаров on 15.09.2022.
 //
 
-import Foundation
-import SpringAnimation
 
-let animationData = AnimationStore()
 
 struct Animation {
-    let presetName: String
-    let curveName: String
+    
+    let preset: String
+    let curve: String
     let force: Double
     let duration: Double
     let delay: Double
-}
-
-extension Animation {
-    static func getAnimation() -> Animation {
-        let randomAnimation: Animation
-        let animationPresets = AnimationPreset.allCases.shuffled()
-        let animationCurves = AnimationCurve.allCases.shuffled()
-        
-        randomAnimation = Animation(
-            presetName: animationPresets[0].rawValue,
-            curveName: animationCurves[0].rawValue,
-            force: Double.random(in: 0.5..<2.5),
-            duration: Double.random(in: 0.5..<3),
-            delay: Double.random(in: 0.5..<3)
-        )
-        return randomAnimation
-    }
     
-}
+    var description: String {
+        """
+        preset: \(preset)
+        curve: \(curve)
+        force: \(String(format: "%.02f", force))
+        duration: \(String(format: "%.02f", duration))
+        delay: \(String(format: "%.02f", delay))
+        """
+    }
+        
+        static func getRandonAnimation() -> Animation {
+            Animation(
+                preset: DataStore.shared.animations.randomElement()?.rawValue ?? "sideLeft",
+                curve: DataStore.shared.animationCurves.randomElement()?.rawValue ?? "easeIn",
+                force: Double.random(in: 1...1.5),
+                duration: Double.random(in: 0.8...1.6),
+                delay: 0.3)
+        }
+    }
