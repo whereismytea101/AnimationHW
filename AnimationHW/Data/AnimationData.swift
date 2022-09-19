@@ -40,5 +40,7 @@ class DataStore {
         .swing
     ]
     
-    let animationCurves = AnimationCurve.allCases 
+    let animationCurves = AnimationCurve.allCases
+    
+    private init() {}
 }

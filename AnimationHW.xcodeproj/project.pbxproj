@@ -43,13 +43,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B3B726A28D2482B00D154AF /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		9B7C14CF28D2587F001974D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +77,6 @@
 				9BCB558E28D23B2400D29DB5 /* ViewControllers */,
 				9BCB558F28D23B3200D29DB5 /* Storyboards */,
 				9BCB559628D23BD000D29DB5 /* Data */,
-				9B3B726A28D2482B00D154AF /* Extensions */,
 			);
 			path = AnimationHW;
 			sourceTree = "<group>";

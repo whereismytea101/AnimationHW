@@ -12,27 +12,29 @@ import SpringAnimation
 class AnimationViewController: UIViewController {
     
     // MARK: - IBOutlets
-    
     @IBOutlet var springView: SpringView!
-    @IBOutlet var presetLabel: UILabel!
-    @IBOutlet var curveLabel: UILabel!
-    @IBOutlet var forceLabel: UILabel!
-    @IBOutlet var durationLabel: UILabel!
-    @IBOutlet var delayLabel: UILabel!
-    
+    @IBOutlet var animationLabel: UILabel! {
+        
+        didSet {
+            animationLabel.text = animation.description
+        }
+    }
+    // MARK: - Private properties
+    private var animation = Animation.getRandonAnimation()
     
     
     // MARK: - IBActions
-    
     @IBAction func runAnimation(_ sender: SpringButton) {
-        springView.animation = animationData.animationArray.randomElement() ?? ""
+        animationLabel.text = animation.description
+        springView.animation = animation.preset
+        springView.curve = animation.curve
+        springView.force = animation.force
+        springView.delay = animation.delay
+        springView.duration = animation.duration
         springView.animate()
         
-        sender.setTitle("\(springView.animation)", for: .normal)
-        sender.titleLabel?.text = presetLabel.text
-        
-        
-        
+        animation = Animation.getRandonAnimation()
+        sender.setTitle("Run \(animation.preset)", for: .normal)
     }
     
     

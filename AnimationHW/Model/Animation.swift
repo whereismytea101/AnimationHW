@@ -34,3 +34,4 @@ struct Animation {
                 delay: 0.3)
         }
     }
+
